@@ -91,7 +91,7 @@ jobs:
     - name: Deploy Nginx-Controller
       run: |
         helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-        kubectl create namespace ingress-nginx
+        kubectl get namespace ingress-nginx || kubectl create namespace ingress-nginx
         helm install ingress-nginx ingress-nginx/ingress-nginx -n ingress-nginx
         
     - name: Configure Cluster Issuer. This will help to generate Certificate for us
