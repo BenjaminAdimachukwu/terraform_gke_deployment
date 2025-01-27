@@ -23,7 +23,7 @@ jobs:
         with:
           status: started Deployment
           channel: '#gitaction_pipeline_status_notifications'
-          message: Started Backend deployment to GCloud Kubernetes cluster...
+          message: Started infrastructure deployment to GCloud Kubernetes cluster...
         if: always()
 
       - name: Checkout
